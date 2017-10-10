@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{cases}
+
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+\title{homework1}
+\author{Zuyao Chen 201728008629002 \\ zychen.uestc@gmail.com}
+
+\date{}
+
+\begin{document}
+\maketitle
+\section{Problem 3.(2) of Page 25}
+yes. 
+Call the set of all real symmetric matrix ``$\mathcal{S}$''.
+\begin{itemize}
+	\item obviously zero matrix $O \in \mathcal{S}$;
+	\item $\forall A \in \mathcal{S},\forall \alpha \in \mathcal{R}$, 
+			$(\alpha A)^{T} = \alpha A$, $\alpha A$ is still symmetric,
+			so $\alpha A \in \mathcal{S}$;
+	\item $\forall A , B \in \mathcal{S}$, $(A+B)^{T} = (A+B)$,
+			$(A+B)$ is symmetric, $(A+B) \in \mathcal{S}$		
+\end{itemize}
+in summary,	the set of all real symmetric matrix is closed under addition and scalar multiplication, so it's a linear space.
+\section{Problem 4 of Page 25}
+\textbf{Proof:} \\
+\indent Let
+$a_1 \cdot 1 + a_2 \cdot \cos^{2}t + a_3 \cdot \cos 2t = 0,a_1,a_2,a_3 \in \mathcal{R}$.
+Suppose $1, \cos^{2} t, \cos 2t$ is linear independent,then 
+it must has $ a_1 = a_2 = a_3 = 0$.
+But as we all know,$\cos 2t = 2\cos^{2} t - 1$,
+if $a_1 = 1, a_2 = -2 , a_3 = 1$, it also has $a_1 \cdot 1 + a_2 \cdot \cos^{2}t + a_3 \cdot \cos 2t = 0$,which is contrary to the hypothesis.
+So $1, \cos^{2} t, \cos 2t$ is linear dependent.
+
+\section{Problem 6 of Page 25}
+let $(\eta_1,\eta_2,\eta_3)$ is the new coordinate of vector $\mathbf{x}$,
+then 
+$\mathbf{x}= \eta_1\mathbf{x}_1 + \eta_2\mathbf{x}_2+ \eta_3\mathbf{x}_3 $,
+,which equals to 
+\[
+(\mathbf{x}_1^{T},\mathbf{x}_2^{T},\mathbf{x}_3^{T}) (\eta_1,\eta_2,\eta_3)^{T} = \mathbf{x}^{T}
+\]
+so $(\eta_1,\eta_2,\eta_3)^{T} 
+= (\mathbf{x}_1^{T},\mathbf{x}_2^{T},\mathbf{x}_3^{T})^{-1}\mathbf{x}^{T} 
+= (33,-82,154)^{T}$.\\
+new coordinate of $\mathbf{x}$ : $(33,-82,154)$
+
+\section{Problem 8 of Page 25}
+let $\mathbf{x} = (\mathbf{x}_1,\mathbf{x}_2,\mathbf{x}_3,\mathbf{x}_4)$,$\mathbf{y} =(\mathbf{y}_1,\mathbf{y}_2,\mathbf{y}_3,\mathbf{y}_4)$,
+then the original equation equals to
+\begin{numcases}{}
+\mathbf{x} (1,2,0,0)^{T} = \mathbf{y} (0,0,1,0)^{T} \\
+\mathbf{x} (0,1,2,0)^{T} = \mathbf{y} (0,0,0,1)^{T}  \\
+\mathbf{y} (1,2,0,0)^{T} = \mathbf{x} (0,0,1,0)^{T} \\
+\mathbf{y} (0,1,2,0)^{T} = \mathbf{x} (0,0,0,1)^{T}
+\end{numcases}
+so
+
+ 
+
+
+
+
+
+\end{document}
