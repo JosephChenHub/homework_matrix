@@ -6,17 +6,29 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{cases}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{enumerate}
+\usepackage{bm}
 
-\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=2cm}
+\makeatletter
+\renewcommand{\thesection}{\arabic{section}.} 
+\newcommand{\mysection}[2]{
+\section{Problem #1 of Page #2}	
+	}
+\makeatother
+
 
 \title{homework1}
 \author{Zuyao Chen 201728008629002 \\ zychen.uestc@gmail.com}
 
 \date{}
 
+
 \begin{document}
 \maketitle
-\section{Problem 3.(2) of Page 25}
+\mysection{3.(2)}{25}
 yes. 
 Call the set of all real symmetric matrix ``$\mathcal{S}$''.
 \begin{itemize}
@@ -28,7 +40,7 @@ Call the set of all real symmetric matrix ``$\mathcal{S}$''.
 			$(A+B)$ is symmetric, $(A+B) \in \mathcal{S}$		
 \end{itemize}
 in summary,	the set of all real symmetric matrix is closed under addition and scalar multiplication, so it's a linear space.
-\section{Problem 4 of Page 25}
+\mysection{4}{25}
 \textbf{Proof:} \\
 \indent Let
 $a_1 \cdot 1 + a_2 \cdot \cos^{2}t + a_3 \cdot \cos 2t = 0,a_1,a_2,a_3 \in \mathcal{R}$.
@@ -38,8 +50,8 @@ But as we all know,$\cos 2t = 2\cos^{2} t - 1$,
 if $a_1 = 1, a_2 = -2 , a_3 = 1$, it also has $a_1 \cdot 1 + a_2 \cdot \cos^{2}t + a_3 \cdot \cos 2t = 0$,which is contrary to the hypothesis.
 So $1, \cos^{2} t, \cos 2t$ is linear dependent.
 
-\section{Problem 6 of Page 25}
-let $(\eta_1,\eta_2,\eta_3)$ is the new coordinate of vector $\mathbf{x}$,
+\mysection{6}{25}
+let $(\eta_1,\eta_2,\eta_3)$ be the new coordinates of vector $\mathbf{x}$,
 then 
 $\mathbf{x}= \eta_1\mathbf{x}_1 + \eta_2\mathbf{x}_2+ \eta_3\mathbf{x}_3 $,
 ,which equals to 
@@ -49,23 +61,183 @@ $\mathbf{x}= \eta_1\mathbf{x}_1 + \eta_2\mathbf{x}_2+ \eta_3\mathbf{x}_3 $,
 so $(\eta_1,\eta_2,\eta_3)^{T} 
 = (\mathbf{x}_1^{T},\mathbf{x}_2^{T},\mathbf{x}_3^{T})^{-1}\mathbf{x}^{T} 
 = (33,-82,154)^{T}$.\\
-new coordinate of $\mathbf{x}$ : $(33,-82,154)$
+new coordinates of $\mathbf{x}$ : $(33,-82,154)$
 
-\section{Problem 8 of Page 25}
-let $\mathbf{x} = (\mathbf{x}_1,\mathbf{x}_2,\mathbf{x}_3,\mathbf{x}_4)$,$\mathbf{y} =(\mathbf{y}_1,\mathbf{y}_2,\mathbf{y}_3,\mathbf{y}_4)$,
+\mysection{8}{25}
+\begin{enumerate}[(1)] 
+	\item 
+let $\mathbf{X} = (\mathbf{x}_1,\mathbf{x}_2,\mathbf{x}_3,\mathbf{x}_4)$,$\mathbf{Y} =(\mathbf{y}_1,\mathbf{y}_2,\mathbf{y}_3,\mathbf{y}_4)$,
 then the original equation equals to
 \begin{numcases}{}
-\mathbf{x} (1,2,0,0)^{T} = \mathbf{y} (0,0,1,0)^{T} \\
-\mathbf{x} (0,1,2,0)^{T} = \mathbf{y} (0,0,0,1)^{T}  \\
-\mathbf{y} (1,2,0,0)^{T} = \mathbf{x} (0,0,1,0)^{T} \\
-\mathbf{y} (0,1,2,0)^{T} = \mathbf{x} (0,0,0,1)^{T}
+\mathbf{X} (1,2,0,0)^{T} = \mathbf{Y} (0,0,1,0)^{T} \label{form1} \\
+\mathbf{X} (0,1,2,0)^{T} = \mathbf{Y} (0,0,0,1)^{T}  \label{form2}\\
+\mathbf{Y} (1,2,0,0)^{T} = \mathbf{X} (0,0,1,0)^{T} \label{form3}\\
+\mathbf{Y} (0,1,2,0)^{T} = \mathbf{X} (0,0,0,1)^{T} \label{form4}
 \end{numcases}
-so
+combining equation(\ref{form1}),(\ref{form2}),(\ref{form3}) and (\ref{form4}),we have \\
+\begin{numcases}{ }
+\mathbf{Y}(1,0,0,0)^{T} = \mathbf{X}(4,8,1,-2)^{T} \\
+\mathbf{Y}(0,1,0,0)^{T} = \mathbf{X}(-2,-4,0,1)^{T} \\
+\mathbf{Y}(0,0,1,0)^{T} = \mathbf{X}(1,2,0,0)^{T} \\
+\mathbf{Y}(0,0,0,1)^{T} = \mathbf{X}(0,1,2,0)^{T} 
+\end{numcases}
+thus the transformation matrix ($\mathbf{Y}=\mathbf{XC}$):\\
+\[
+\mathbf{C} = \left(
+\begin{array}{cccc}
+4 &-2 &1 &0\\
+8 &-4 &2 &1\\
+1 &0 & 0 &2 \\
+-2&1 & 0 &0 
+\end{array}
+\right)
+\]	
+\item let $\mathbf{z}$ be the new coordinates, \\
+\[ \mathbf{z}
+\left( 
+\begin{array}{cccc}
+4 &-2 &1 &0\\
+8 &-4 &2 &1\\
+1 &0 & 0 &2 \\
+-2&1 & 0 &0 
+\end{array}
+\right)
+= (2,-1,1,1) 
+\]
+thus,$\mathbf{z} = (2,-1,1,1) \mathbf{C}^{-1} = (-1,1,0,1) $.
+\end{enumerate}
+\mysection{10}{26}
+call the span space ``$\mathcal{S}$'',the linear combination of 
+$\mathbf{y}_1,\mathbf{y}_2,\mathbf{y}_3$ can be written as
+\begin{equation} 
+\begin{split}
+&k_1 (\mathbf{x}_1 - 2\mathbf{x}_2 + 3\mathbf{x}_3)+
+ k_2(2\mathbf{x}_1 + 3\mathbf{x}_2 + 2\mathbf{x}_3)
+ + k_3(4\mathbf{x}_1 + 13\mathbf{x}_2) \\
+ =& (k_1 + 2K_2 + 4k_3)\mathbf{x}_1 + 
+ (-2k_1+3k_2 + 13k_3)\mathbf{x}_2 +
+ (3k_1 + 2k_2)\mathbf{x}_3
+\end{split}
+\end{equation}
+it's a linear combination of $\mathbf{x}_1,\mathbf{x}_2,\mathbf{x}_3$,
+thus $\mathbf{x}_1,\mathbf{x}_2,\mathbf{x}_3$ is one basis of space $\mathcal{S}$
+\mysection{11}{26} 
+$\mathbf{S} = \mathbf{V}_1 \bigcap  \mathbf{V}_2 =
+\{(\zeta_1,\zeta_2,\zeta_3,\zeta_4)|\zeta_1 = -\zeta_3, \zeta_2 = \zeta_4
+\}
+$,let $\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3,\mathbf{e}_4$
+be the standard basis of $\mathbf{R}^{4}$.
+$\forall \mathbf{x} = (x_1,x_2,x_3,x_4) \in \mathbf{S}$, \\
+\begin{equation}
+\begin{split}
+\mathbf{x} &= x_1 \mathbf{e}_1 + x_2\mathbf{e}_2 + x_3\mathbf{e}_3 + x_4\mathbf{e}_4 \\
+&= x_1(\mathbf{e}_1 -\mathbf{e}_3) + x_2(\mathbf{e}_2 + \mathbf{e}_4)
+\end{split} 
+\end{equation} 
+any element in $\mathbf{S}$ can be derived from linear combination of
+$\mathbf{e}_1 - \mathbf{e}_3$ and $\mathbf{e}_2 + \mathbf{e}_4$,
+so $\mathbf{e}_1 - \mathbf{e}_3$, $\mathbf{e}_2 + \mathbf{e}_4$ is one basis of $\mathbf{S}$.
+\mysection{12}{26}
+\begin{enumerate}[(1)]
+\item \textbf{Proof}: 
+\begin{itemize}
+	\item obviously zero matrix $O \in \mathbf{V}$ 
+	\item $\forall A,B \in \mathbf{V},\forall \alpha,\beta \in \mathbf{R},
+		\alpha A + \beta B = \left(
+		\begin{array}{cc}
+		 \alpha a_{11} + \beta b_{11} & * \\
+		 * & \alpha a_{22} + \beta b_{22}
+		\end{array} 
+		\right) \in \mathbf{V}
+	$
+\end{itemize}
+$\mathbf{V}$ is closed under addition and scalar multiplication ,
+thus it is a subspace of $\mathbf{R}^{2\text{x}2}$.
+\item let $ 
+\mathbf{e}_1 = \left(
+	\begin{array}{cc}
+	 1 & 0  \\
+	 0 & -1  
+	\end{array} 
+\right),
+\mathbf{e}_2 = \left(
+\begin{array}{cc}
+0 & 1  \\
+0 & 0  
+\end{array} 
+\right),
+\mathbf{e}_3 = \left(
+\begin{array}{cc}
+0 & 0  \\
+1 & 0  
+\end{array} 
+\right)
+$,
+$\forall A \in \mathbf{V}$, \\
+\[
+A = \left( \begin{array}{cc}
+a_{11} & a_{12} \\
+a_{21} & -a_{11}
+\end{array} \right) 
+= a_{11}\mathbf{e}_1 + a_{12}\mathbf{e}_2 + 
+a_{21}\mathbf{e}_3
+\]
+$\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3$ is linear independent,
+so the dimension of subspace $\mathbf{V}$ is 3
+and $\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3$ is one basis of $\mathbf{V}$.
 
+\end{enumerate}
+\section{Additional Problem}
+\textbf{Question}: \\
+if $\mathbf{W}_1,\mathbf{W}_2,\mathbf{W}_3$ are subspaces of $\mathbf{W}$, then 
+$(\mathbf{W}_1 \bigcap \mathbf{W}_3) + (\mathbf{W}_2 \bigcap \mathbf{W}_3) \subset (\mathbf{W}_1 +\mathbf{W}_2) \bigcap \mathbf{W}_3$.
+Can the left equal to the right under some circumstances?
  
 
 
-
+\mysection{1.(2)}{77}
+Yes. $\forall X_1 ,X_2 \in \mathbf{R}^{n\text{x}n}$,$\forall 
+\alpha,\beta \in \mathbf{R}
+$\\
+\[T(\alpha X_1 + \beta X_2) = B(\alpha X_1 + \beta X_2)C = \alpha BX_1C + \beta BX_2C = \alpha T(X_1) + \beta T(X_2) \]
+thus $T$ is linear transformation.
+\mysection{6}{78}
+let $A = (x_1,x_2,..,x_6)^{T}$,
+\begin{equation*}
+\left\lbrace 
+\begin{split}
+\frac{\partial x_1}{\partial t} &= ax_1-bx_2 \\
+\frac{\partial x_2}{\partial t} &= bx_1+ax_2\\
+\frac{\partial x_3}{\partial t} &=(1+at)x_1 - btx_2, \\
+\frac{\partial x_4}{\partial t}&=btx_1 + (1+at)x_2,\\
+\frac{\partial x_5}{\partial t}&=(t+\frac{1}{2}at^{2})x_1
+- \frac{1}{2}bt^{2}x_2,\\
+\frac{\partial x_6}{\partial t}&= \frac{1}{2}bt^{2}x_1 + (t+\frac{1}{2}at^{2})x_2
+\end{split}
+\right .
+\end{equation*}
+thus 
+\begin{equation*}
+\begin{split}
+\nabla_t(A) &= (\frac{\partial x_1}{\partial t},\frac{\partial x_2}{\partial t},...,\frac{\partial x_6}{\partial t})^{T} \\
+&= \left(
+\begin{array}{cccccc}
+a & -b & 0 & 0 & 0 &0 \\
+b & a & 0 &0 &0&0\\
+1+at&-bt&0&0&0&0\\
+bt&1+at&0&0&0&0 \\
+t+\frac{1}{2}at^{2}&-\frac{1}{2}bt^{2}&0&0&0&0 \\
+\frac{1}{2}bt^{2}&t+\frac{1}{2}at^{2}&0&0&0&0
+\end{array}
+\right)A \\
+&= D A
+\end{split}
+\end{equation*}
+$\forall B = (b_1, b_2 , ...
+,b_6)^{T} \in \mathbf{V}$,
+\[
+\nabla_t(B) = D B
+\]
 
 
 \end{document}
