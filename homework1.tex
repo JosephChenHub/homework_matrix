@@ -14,9 +14,13 @@
 \geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=2cm}
 \makeatletter
 \renewcommand{\thesection}{\arabic{section}.} 
+%
 \newcommand{\mysection}[2]{
 \section{Problem #1 of Page #2}	
 	}
+
+%\renewcommand{\thesubsection}{(\arabic{subsection})} 
+
 \makeatother
 
 
@@ -30,60 +34,60 @@
 \maketitle
 \mysection{3.(2)}{25}
 yes. 
-Call the set of all real symmetric matrix ``$\mathcal{S}$''.
+Call the set of all real symmetric matrix ``${S}$''.
 \begin{itemize}
-	\item obviously zero matrix $O \in \mathcal{S}$;
-	\item $\forall A \in \mathcal{S},\forall \alpha \in \mathcal{R}$, 
-			$(\alpha A)^{T} = \alpha A$, $\alpha A$ is still symmetric,
-			so $\alpha A \in \mathcal{S}$;
-	\item $\forall A , B \in \mathcal{S}$, $(A+B)^{T} = (A+B)$,
-			$(A+B)$ is symmetric, $(A+B) \in \mathcal{S}$		
+	\item obviously zero matrix $\bm O \in {S}$;
+	\item $\forall \bm A \in {S},\forall \alpha \in \mathbf{R}$, 
+			$(\alpha \bm{A})^{T} = \alpha \bm{A}$, $\alpha \bm{A}$ is still symmetric,
+			so $\alpha \bm{A} \in  {S}$;
+	\item $\forall \bm{A} , \bm{B} \in  {S}$, $(\bm{A}+\bm{B})^{T} = (\bm{A}+\bm{B})$,
+			$(\bm{A}+\bm{B})$ is symmetric, $(\bm{A}+\bm{B}) \in  {S}$		
 \end{itemize}
 in summary,	the set of all real symmetric matrix is closed under addition and scalar multiplication, so it's a linear space.
 \mysection{4}{25}
 \textbf{Proof:} \\
 \indent Let
-$a_1 \cdot 1 + a_2 \cdot \cos^{2}t + a_3 \cdot \cos 2t = 0,a_1,a_2,a_3 \in \mathcal{R}$.
-Suppose $1, \cos^{2} t, \cos 2t$ is linear independent,then 
+$a_1 \cdot 1 + a_2 \cdot \cos^{2}t + a_3 \cdot \cos 2t = 0,a_1,a_2,a_3 \in \mathbf{R}$.
+Suppose that $1, \cos^{2} t, \cos 2t$ is linear independent,then 
 it must has $ a_1 = a_2 = a_3 = 0$.
 But as we all know,$\cos 2t = 2\cos^{2} t - 1$,
 if $a_1 = 1, a_2 = -2 , a_3 = 1$, it also has $a_1 \cdot 1 + a_2 \cdot \cos^{2}t + a_3 \cdot \cos 2t = 0$,which is contrary to the hypothesis.
 So $1, \cos^{2} t, \cos 2t$ is linear dependent.
 
 \mysection{6}{25}
-let $(\eta_1,\eta_2,\eta_3)$ be the new coordinates of vector $\mathbf{x}$,
+let $(\eta_1,\eta_2,\eta_3)^{T}$ be the new coordinates of vector $\bm{x}$,
 then 
-$\mathbf{x}= \eta_1\mathbf{x}_1 + \eta_2\mathbf{x}_2+ \eta_3\mathbf{x}_3 $,
-,which equals to 
+$\bm{x}= \eta_1\bm{x}_1 + \eta_2\bm{x}_2+ \eta_3\bm{x}_3 $,
+which equals to 
 \[
-(\mathbf{x}_1^{T},\mathbf{x}_2^{T},\mathbf{x}_3^{T}) (\eta_1,\eta_2,\eta_3)^{T} = \mathbf{x}^{T}
+(\bm{x}_1^{T},\bm{x}_2^{T},\bm{x}_3^{T}) (\eta_1,\eta_2,\eta_3)^{T} = \bm{x}^{T}
 \]
 so $(\eta_1,\eta_2,\eta_3)^{T} 
-= (\mathbf{x}_1^{T},\mathbf{x}_2^{T},\mathbf{x}_3^{T})^{-1}\mathbf{x}^{T} 
+= (\bm{x}_1^{T},\bm{x}_2^{T},\bm{x}_3^{T})^{-1}\bm{x}^{T} 
 = (33,-82,154)^{T}$.\\
-new coordinates of $\mathbf{x}$ : $(33,-82,154)$
+new coordinates of $\bm{x}$ : $(33,-82,154)^{T}$
 
 \mysection{8}{25}
 \begin{enumerate}[(1)] 
 	\item 
-let $\mathbf{X} = (\mathbf{x}_1,\mathbf{x}_2,\mathbf{x}_3,\mathbf{x}_4)$,$\mathbf{Y} =(\mathbf{y}_1,\mathbf{y}_2,\mathbf{y}_3,\mathbf{y}_4)$,
-then the original equation equals to
+
+the original equation is equivalent to 
 \begin{numcases}{}
-\mathbf{X} (1,2,0,0)^{T} = \mathbf{Y} (0,0,1,0)^{T} \label{form1} \\
-\mathbf{X} (0,1,2,0)^{T} = \mathbf{Y} (0,0,0,1)^{T}  \label{form2}\\
-\mathbf{Y} (1,2,0,0)^{T} = \mathbf{X} (0,0,1,0)^{T} \label{form3}\\
-\mathbf{Y} (0,1,2,0)^{T} = \mathbf{X} (0,0,0,1)^{T} \label{form4}
+(\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4) (1,2,0,0)^{T} = (\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)  (0,0,1,0)^{T} \label{form1} \\
+(\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4)  (0,1,2,0)^{T} = (\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)  (0,0,0,1)^{T}  \label{form2}\\
+(\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)  (1,2,0,0)^{T} = (\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4)  (0,0,1,0)^{T} \label{form3}\\
+(\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)  (0,1,2,0)^{T} = (\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4)  (0,0,0,1)^{T} \label{form4}
 \end{numcases}
 combining equation(\ref{form1}),(\ref{form2}),(\ref{form3}) and (\ref{form4}),we have \\
 \begin{numcases}{ }
-\mathbf{Y}(1,0,0,0)^{T} = \mathbf{X}(4,8,1,-2)^{T} \\
-\mathbf{Y}(0,1,0,0)^{T} = \mathbf{X}(-2,-4,0,1)^{T} \\
-\mathbf{Y}(0,0,1,0)^{T} = \mathbf{X}(1,2,0,0)^{T} \\
-\mathbf{Y}(0,0,0,1)^{T} = \mathbf{X}(0,1,2,0)^{T} 
+(\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4) (1,0,0,0)^{T} = (\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4) (4,8,1,-2)^{T} \\
+(\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4) (0,1,0,0)^{T} =(\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4) (-2,-4,0,1)^{T} \\
+(\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4) (0,0,1,0)^{T} = (\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4) (1,2,0,0)^{T} \\
+(\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4) (0,0,0,1)^{T} = (\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4) (0,1,2,0)^{T} 
 \end{numcases}
-thus the transformation matrix ($\mathbf{Y}=\mathbf{XC}$):\\
+thus the transformation matrix ($(\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4) =(\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4) \bm{C}$):\\
 \[
-\mathbf{C} = \left(
+\bm{C} = \left(
 \begin{array}{cccc}
 4 &-2 &1 &0\\
 8 &-4 &2 &1\\
@@ -92,152 +96,406 @@ thus the transformation matrix ($\mathbf{Y}=\mathbf{XC}$):\\
 \end{array}
 \right)
 \]	
-\item let $\mathbf{z}$ be the new coordinates, \\
-\[ \mathbf{z}
-\left( 
-\begin{array}{cccc}
-4 &-2 &1 &0\\
-8 &-4 &2 &1\\
-1 &0 & 0 &2 \\
--2&1 & 0 &0 
-\end{array}
-\right)
-= (2,-1,1,1) 
+\item let $\bm{z}$ be the new coordinates, \\
+\[  
+(\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)(2,-1,1,1)^{T}
+=(\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4)\bm{C}(2,-1,1,1)^{T}
 \]
-thus,$\mathbf{z} = (2,-1,1,1) \mathbf{C}^{-1} = (-1,1,0,1) $.
+thus,$\bm{z} = \bm{C}(2,-1,1,1)^{T} = (11,23,4,-5)^{T} $.
 \end{enumerate}
 \mysection{10}{26}
-call the span space ``$\mathcal{S}$'',the linear combination of 
-$\mathbf{y}_1,\mathbf{y}_2,\mathbf{y}_3$ can be written as
+call the span space ``${S}$'',the linear combination of 
+$\bm{y}_1,\bm{y}_2,\bm{y}_3$ can be written as
 \begin{equation} 
 \begin{split}
-&k_1 (\mathbf{x}_1 - 2\mathbf{x}_2 + 3\mathbf{x}_3)+
- k_2(2\mathbf{x}_1 + 3\mathbf{x}_2 + 2\mathbf{x}_3)
- + k_3(4\mathbf{x}_1 + 13\mathbf{x}_2) \\
- =& (k_1 + 2K_2 + 4k_3)\mathbf{x}_1 + 
- (-2k_1+3k_2 + 13k_3)\mathbf{x}_2 +
- (3k_1 + 2k_2)\mathbf{x}_3
+&k_1 (\bm{x}_1 - 2\bm{x}_2 + 3\bm{x}_3)+
+ k_2(2\bm{x}_1 + 3\bm{x}_2 + 2\bm{x}_3)
+ + k_3(4\bm{x}_1 + 13\bm{x}_2) \\
+ =& (k_1 + 2k_2 + 4k_3)\bm{x}_1 + 
+ (-2k_1+3k_2 + 13k_3)\bm{x}_2 +
+ (3k_1 + 2k_2)\bm{x}_3 \\
 \end{split}
 \end{equation}
-it's a linear combination of $\mathbf{x}_1,\mathbf{x}_2,\mathbf{x}_3$,
-thus $\mathbf{x}_1,\mathbf{x}_2,\mathbf{x}_3$ is one basis of space $\mathcal{S}$
+it's a linear combination of $\bm{x}_1,\bm{x}_2,\bm{x}_3$,
+thus $\bm{x}_1,\bm{x}_2,\bm{x}_3$ is one basis of space ${S}$.
 \mysection{11}{26} 
-$\mathbf{S} = \mathbf{V}_1 \bigcap  \mathbf{V}_2 =
-\{(\zeta_1,\zeta_2,\zeta_3,\zeta_4)|\zeta_1 = -\zeta_3, \zeta_2 = \zeta_4
+${S} = {V}_1 \bigcap  {V}_2 =
+\{(\xi_1,\xi_2,\xi_3,\xi_4)|\xi_1 = -\xi_3, \xi_2 = -\xi_4
 \}
-$,let $\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3,\mathbf{e}_4$
+$,let $\bm{e}_1,\bm{e}_2,\bm{e}_3,\bm{e}_4$
 be the standard basis of $\mathbf{R}^{4}$.
-$\forall \mathbf{x} = (x_1,x_2,x_3,x_4) \in \mathbf{S}$, \\
+$\forall \bm{x} = (x_1,x_2,x_3,x_4) \in {S}$, \\
 \begin{equation}
 \begin{split}
-\mathbf{x} &= x_1 \mathbf{e}_1 + x_2\mathbf{e}_2 + x_3\mathbf{e}_3 + x_4\mathbf{e}_4 \\
-&= x_1(\mathbf{e}_1 -\mathbf{e}_3) + x_2(\mathbf{e}_2 + \mathbf{e}_4)
+\bm{x} &= x_1 \bm{e}_1 + x_2\bm{e}_2 + x_3\bm{e}_3 + x_4\bm{e}_4 \\
+&= x_1(\bm{e}_1 -\bm{e}_3) + x_2(\bm{e}_2 - \bm{e}_4) \\
+& = x_1(1,0,-1,0)^{T} + x_2 (0,1,0,-1)^{T}
 \end{split} 
 \end{equation} 
-any element in $\mathbf{S}$ can be derived from linear combination of
-$\mathbf{e}_1 - \mathbf{e}_3$ and $\mathbf{e}_2 + \mathbf{e}_4$,
-so $\mathbf{e}_1 - \mathbf{e}_3$, $\mathbf{e}_2 + \mathbf{e}_4$ is one basis of $\mathbf{S}$.
+any element in ${S}$ can be derived from linear combination of
+$\bm{e}_1 - \bm{e}_3$ and $\bm{e}_2 - \bm{e}_4$,
+so $\bm{e}_1 - \bm{e}_3$, $\bm{e}_2 - \bm{e}_4$ is one basis of ${S}$.
 \mysection{12}{26}
 \begin{enumerate}[(1)]
 \item \textbf{Proof}: 
 \begin{itemize}
-	\item obviously zero matrix $O \in \mathbf{V}$ 
-	\item $\forall A,B \in \mathbf{V},\forall \alpha,\beta \in \mathbf{R},
-		\alpha A + \beta B = \left(
+	\item obviously zero matrix $\bm O \in {V}$ 
+	\item $\forall \bm{A},\bm{B} \in {V},\forall \alpha,\beta \in \mathbf{R},
+		\alpha \bm{A} + \beta \bm{B} = \left(
 		\begin{array}{cc}
 		 \alpha a_{11} + \beta b_{11} & * \\
 		 * & \alpha a_{22} + \beta b_{22}
 		\end{array} 
-		\right) \in \mathbf{V}
+		\right) \in {V}
 	$
 \end{itemize}
-$\mathbf{V}$ is closed under addition and scalar multiplication ,
-thus it is a subspace of $\mathbf{R}^{2\text{x}2}$.
+${V}$ is closed under addition and scalar multiplication ,
+thus it is a subspace of $\mathbf{R}^{2\text{X}2}$.
 \item let $ 
-\mathbf{e}_1 = \left(
+\bm{e}_1 = \left(
 	\begin{array}{cc}
 	 1 & 0  \\
 	 0 & -1  
 	\end{array} 
 \right),
-\mathbf{e}_2 = \left(
+\bm{e}_2 = \left(
 \begin{array}{cc}
 0 & 1  \\
 0 & 0  
 \end{array} 
 \right),
-\mathbf{e}_3 = \left(
+\bm{e}_3 = \left(
 \begin{array}{cc}
 0 & 0  \\
 1 & 0  
 \end{array} 
 \right)
 $,
-$\forall A \in \mathbf{V}$, \\
+$\forall A \in {V}$, \\
 \[
 A = \left( \begin{array}{cc}
 a_{11} & a_{12} \\
 a_{21} & -a_{11}
 \end{array} \right) 
-= a_{11}\mathbf{e}_1 + a_{12}\mathbf{e}_2 + 
-a_{21}\mathbf{e}_3
+= a_{11}\bm{e}_1 + a_{12}\bm{e}_2 + 
+a_{21}\bm{e}_3
 \]
-$\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3$ is linear independent,
-so the dimension of subspace $\mathbf{V}$ is 3
-and $\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3$ is one basis of $\mathbf{V}$.
+$\bm{e}_1,\bm{e}_2,\bm{e}_3$ is linear independent,
+so the dimension of subspace ${V}$ is 3
+and $\bm{e}_1,\bm{e}_2,\bm{e}_3$ is one basis of ${V}$.
 
 \end{enumerate}
 \section{Additional Problem}
 \textbf{Question}: \\
-if $\mathbf{W}_1,\mathbf{W}_2,\mathbf{W}_3$ are subspaces of $\mathbf{W}$, then 
-$(\mathbf{W}_1 \bigcap \mathbf{W}_3) + (\mathbf{W}_2 \bigcap \mathbf{W}_3) \subset (\mathbf{W}_1 +\mathbf{W}_2) \bigcap \mathbf{W}_3$.
+if ${W}_1,{W}_2,{W}_3$ are subspaces of ${W}$, then 
+$({W}_1 \bigcap {W}_3) + ({W}_2 \bigcap {W}_3) \subset ({W}_1 +{W}_2) \bigcap {W}_3$.
 Can the left equal to the right under some circumstances?
  
 
 
 \mysection{1.(2)}{77}
-Yes. $\forall X_1 ,X_2 \in \mathbf{R}^{n\text{x}n}$,$\forall 
+Yes. $\forall \bm{X}_1 ,\bm{X}_2 \in \mathbf{R}^{n\text{x}n}$,$\forall 
 \alpha,\beta \in \mathbf{R}
 $\\
-\[T(\alpha X_1 + \beta X_2) = B(\alpha X_1 + \beta X_2)C = \alpha BX_1C + \beta BX_2C = \alpha T(X_1) + \beta T(X_2) \]
+\[T(\alpha \bm{X}_1 + \beta \bm{X}_2)
+ = \bm{B}(\alpha \bm{X}_1 + \beta \bm{X}_2)\bm{C} 
+ = \alpha \bm{B}\bm{X}_1\bm{C} + \beta \bm{BX}_2\bm{C} = \alpha T(\bm{X}_1) + \beta T(\bm{X}_2) \]
 thus $T$ is linear transformation.
 \mysection{6}{78}
-let $A = (x_1,x_2,..,x_6)^{T}$,
+let $\bm{g} = (\bm{x}_1,\bm{x}_2,..,\bm{x}_6)$,
 \begin{equation*}
 \left\lbrace 
 \begin{split}
-\frac{\partial x_1}{\partial t} &= ax_1-bx_2 \\
-\frac{\partial x_2}{\partial t} &= bx_1+ax_2\\
-\frac{\partial x_3}{\partial t} &=(1+at)x_1 - btx_2, \\
-\frac{\partial x_4}{\partial t}&=btx_1 + (1+at)x_2,\\
-\frac{\partial x_5}{\partial t}&=(t+\frac{1}{2}at^{2})x_1
-- \frac{1}{2}bt^{2}x_2,\\
-\frac{\partial x_6}{\partial t}&= \frac{1}{2}bt^{2}x_1 + (t+\frac{1}{2}at^{2})x_2
+\frac{\partial \bm{x}_1}{\partial t} &= a\bm{x}_1-b\bm{x}_2 \\
+\frac{\partial \bm{x}_2}{\partial t} &= b\bm{x}_1+a\bm{x}_2\\
+\frac{\partial \bm{x}_3}{\partial t} &=\bm{x}_1 + a\bm{x}_3 - b\bm{x}_4 \\
+\frac{\partial \bm{x}_4}{\partial t}&=\bm{x}_2 + b\bm{x}_3 + a\bm{x}_4\\
+\frac{\partial \bm{x}_5}{\partial t}&=\bm{x}_3 + a\bm{x}_5 - b\bm{x}_6\\
+\frac{\partial \bm{x}_6}{\partial t}&= \bm{x}_4 +b\bm{x}_5 + a\bm{x}_6 
 \end{split}
 \right .
 \end{equation*}
 thus 
 \begin{equation*}
 \begin{split}
-\nabla_t(A) &= (\frac{\partial x_1}{\partial t},\frac{\partial x_2}{\partial t},...,\frac{\partial x_6}{\partial t})^{T} \\
-&= \left(
+\nabla_t(\bm{g}) &= (\frac{\partial \bm{x}_1}{\partial t},
+\frac{\partial \bm{x}_2}{\partial t},...,\frac{\partial \bm{x}_6}{\partial t}) \\
+&=\bm{g} \left(
 \begin{array}{cccccc}
-a & -b & 0 & 0 & 0 &0 \\
-b & a & 0 &0 &0&0\\
-1+at&-bt&0&0&0&0\\
-bt&1+at&0&0&0&0 \\
-t+\frac{1}{2}at^{2}&-\frac{1}{2}bt^{2}&0&0&0&0 \\
-\frac{1}{2}bt^{2}&t+\frac{1}{2}at^{2}&0&0&0&0
+a & b & 1 &0 &0 &0 \\
+-b &a & 0 &1&0 &0 \\
+0 &0 &a &b &1 &0\\
+0 &0 &-b&a&0 &1\\
+0 &0 &0 &0&a&b\\
+0 &0 &0 &0 &-b &a
 \end{array}
-\right)A \\
-&= D A
+\right)\\
+&= \bm{gD}
 \end{split}
 \end{equation*}
-$\forall B = (b_1, b_2 , ...
-,b_6)^{T} \in \mathbf{V}$,
+$\bm D$ is what we wanted.
+\mysection{8}{78}
 \[
-\nabla_t(B) = D B
+\begin{split}
+T_1\bm{E}_{11} &=\left(  \begin{array}{cc}
+a & 0 \\
+c & 0
+\end{array}
+\right)=a\bm{E}_{11} + c\bm{E}_{21},
+T_1\bm{E}_{12} =\left(  \begin{array}{cc}
+0 & a \\
+0 & c
+\end{array}
+\right)
+= a\bm{E}_{12} + c\bm{E}_{22},  \\
+T_1\bm{E}_{21} &=\left(  \begin{array}{cc}
+b & 0 \\
+d & 0
+\end{array}
+\right)
+=b\bm{E}_{11} + d\bm{E}_{21}, 
+T_1\bm{E}_{22} =\left(  \begin{array}{cc}
+0 & b \\
+0 & d
+\end{array}
+\right)
+=b\bm{E}_{12} + d\bm{E}_{22}
+\end{split}
 \]
+\begin{equation*}
+\begin{split}
+T_1(\bm{E}_{11},\bm{E}_{12},\bm{E}_{21},\bm{E}_{22}) 
+&= (T_1\bm{E}_{11},T_1\bm{E}_{12},T_1\bm{E}_{21},T_1\bm{E}_{22}) \\
+&= (\bm{E}_{11},\bm{E}_{12},\bm{E}_{21},\bm{E}_{22})
+\left( \begin{array}{cccc}
+a & 0 & b & 0\\
+0 & a & 0 & b\\
+c & 0 & d & 0 \\
+0 & c & 0 & d
+\end{array} 
+\right)  \\
+\bm{A}_1 &= \left( \begin{array}{cccc}
+a & 0 & b & 0\\
+0 & a & 0 & b\\
+c & 0 & d & 0 \\
+0 & c & 0 & d
+\end{array} 
+\right) 
+\end{split}
+\end{equation*}
+\qquad similarly,we can get 
+\begin{equation*}
+\bm{A}_2 = \left(\begin{array}{cccc}
+a & c & 0 & 0 \\
+b & d & 0 & 0 \\
+0 & 0 & a & c\\
+0 & 0 & b & d
+\end{array} 
+\right),\bm{A}_3 = \bm{A}_1\bm{A}_2 
+\end{equation*}
+
+\mysection{9}{78}
+\textbf{Proof:} \\
+\indent considering the linear combination of $\bm{x},T\bm{x},...,T^{k-1}\bm{x}$
+\[
+\alpha_1 \bm{x} + \alpha_2 T\bm{x} + ...+ \alpha_kT^{k-1}\bm{x} = \bm{0},
+\]
+apply transformation $T$ for both sides,we have
+\[
+\alpha_1T\bm{x} + \alpha_2T^{2}\bm{x} + ... + \alpha_{k-1}T^{k-1}\bm{x} + \alpha_kT^{k}\bm{x} = \bm{0}
+\]
+as $T^{k}\bm{x} = \bm{0},T^{k-1}\bm{x} \neq \bm{0}$,  
+\[
+\alpha_1 T\bm{x} +\alpha_2T^{2}\bm{x} + ... + \alpha_{k-1}T^{k-1}\bm{x} = \bm{0}
+\]
+repeat the transformation above until 
+\[
+\alpha_1 T^{k-1}\bm{x} = \bm{0}
+\]
+so we get $\alpha_1 = 0$,then go back 
+\[
+\alpha_1 T^{k-2}\bm{x} + \alpha_2 T^{k-1}\bm{x} = \bm{0}
+\]
+we get $\alpha_2 = 0$,then from 
+\[
+\alpha_1 T^{k-3}\bm{x} + \alpha_2 T^{k-2}\bm{x} + \alpha_3 T^{k-1}\bm{x} = \bm{0}
+\]
+we get $\alpha_3 = 0$,
+similarly we can get $\alpha_1 = \alpha_2 = ... = \alpha_k = 0$. \\
+Thus $\bm{x},T\bm{x},...,T^{k-1}\bm{x}$ is linear independent. 
+\mysection{10}{78} 
+\[
+T\bm{x} = \bm{x}\left(\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1\\
+0 & 0 & 0 
+\end{array} 
+\right) 
+\]
+thus,
+\[
+T^{2}\bm{x} = \bm{x}\left( \begin{array}{ccc}
+0 & 0 & 1\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array} 
+\right) 
+\]
+\[
+\begin{split} 
+R(T^{2}) &= \left\lbrace \bm{y}|\bm{y}=T^2\bm{x},\bm{x}\in \mathbf{R}^{3} \right\rbrace
+= \left\lbrace (0,0,\xi_1)|\xi_1 \in \mathbf{R}  \right\rbrace  \\
+ N(T^{2}) &= \left\lbrace \bm{x}|T^{2}\bm{x} = \bm{0} ,\bm{x} \in \mathbf{R}^{3}\right\rbrace 
+= \left\lbrace (0,\xi_2,\xi_3)|\xi_2,\xi_3 \in \mathbf{R} \right\rbrace
+\end{split} 
+\]
+for $R(T^{2})$,its dimension is 1 and $(0,0,1)$ is one basis ;\\
+for $N(T^{2})$,its dimension is 2 and $(0,1,0),(0,0,1)$ is one basis.
+\mysection{11}{78}
+\begin{enumerate}[(1)]
+\item  $(\bm{y}_1,\bm{y}_2,\bm{y}_3) = (\bm{x}_1,\bm{x}_2,\bm{x}_3) \bm{C}$,
+thus 
+\[
+\begin{split}
+\bm{C} &= \left(\begin{array}{ccc}
+1 & 2 & 1\\
+0 & 1 & 1 \\
+1 & 0 & 1
+\end{array} \right)^{-1} \left(\begin{array}{ccc}
+1 & 2 &2\\
+2 & 2 &-1\\
+-1& -1&-1
+\end{array} 
+\right) \\
+&= \left(\begin{array}{ccc} 
+-2 & -1.5 & 1.5 \\
+1 & 1.5 &1.5 \\
+1 &0.5&-2.5
+\end{array} 
+\right) 
+\end{split} 
+\]
+\item  $T(\bm{x}_1,\bm{x}_2,\bm{x}_3) =(\bm{y}_1,\bm{y}_2,\bm{y}_3)
+= (\bm{x}_1,\bm{x}_2,\bm{x}_3) \bm{C}$,
+ thus the matrix is $\bm{C}$
+\item $T(\bm{y}_1,\bm{y}_2,\bm{y}_3) = (\bm{y}_1,\bm{y}_2,\bm{y}_3) \bm{C}$,
+thus the matrix is $\bm{C}$
+\end{enumerate} 
+\mysection{12}{79}
+\begin{equation}
+\label{form15.1}
+\det (\bm{A} - \lambda \bm{I}) = 0
+\end{equation}
+we can get $\lambda_1 = -2,\lambda_2 = \lambda_3 = 1$ from equation(\ref{form15.1}).\\
+for $\lambda_1 = -2 $,solving the equation $(\bm{A} - \lambda_1 \bm{I})\bm{x} = \bm{0}$,
+we get a basic solution:$(0,0,1)^{T} $.all eigenvectors of $T$ are 
+\[
+k\bm{x}_3, k \in \mathbf{R}, k \neq 0
+\]
+for $\lambda_2 = \lambda_3 = 1$, we get a basic solution:$(3,-6,20)^{T}$,all eigenvectors of $T$
+are 
+\[
+k(3\bm{x}_1 - 6\bm{x}_2 + 20\bm{x}_3), k \in \mathbf{R}, k \neq 0
+\]
+\mysection{13}{79}
+\qquad from $\det(\bm{A}-\lambda\bm{I}) = 0$  we can get $\lambda_1 = 2,\lambda_2 = \lambda_3 =1$.
+for $\lambda_1 = 2$, we get a basic solution $(0,0,1)^{T}$;
+for $\lambda_2 = \lambda_3 = 1$, we get a basic solution $(-1,-2,1)^{T}$.
+then we obtain a non-singular matrix:
+\[
+\bm{P}_1 = \left( \begin{array}{ccc}
+0 & -1 & 1 \\
+0 & -2 & 0\\
+1 & 1  & 0
+\end{array} 
+\right) 
+\]
+further,
+\[
+\bm{P}_1^{-1}\bm{AP}_1 = \left( \begin{array}{ccc}
+2 &    0 &   -1 \\
+0 &    1 &    2 \\
+0 &    0 &    1
+\end{array}  
+\right) 
+\]
+\mysection{15}{79}
+let $\psi(\lambda) = (2\lambda^{4} - 12\lambda^{3} + 19 \lambda^{2} - 29\lambda + 37)$,
+the characteristic polynomial of A \\
+\[
+\varphi(\lambda) = \det(\bm{A} - \lambda\bm{I}) = (\lambda - 1)(\lambda - 5) + 2 
+= \lambda^{2} - 6\lambda + 7
+\]
+so 
+\[
+\psi(\lambda) = \varphi(\lambda)(2\lambda^{2} + 5) + \lambda + 2
+\] 
+\[
+\begin{split}
+\psi(\bm{A}) &= \varphi(\bm{A})(2\bm{A}^{2} + 5\bm{I}) + \bm{A} + 2\bm{I} \\
+&= \bm{A} + 2\bm{I}
+\end{split} 
+\] 
+the original problem is equivalent to  solving ${\psi(\bm{A})}^{-1} $ ,
+\[
+\psi(\bm{A})^{-1} = (\bm{A}+2\bm{I})^{-1} = \frac{1}{23}\left( \begin{array}{cc}
+7 & 1 \\
+-2 & 3
+\end{array} 
+\right) 
+\]
+\mysection{16}{79}
+\begin{enumerate}[(1)]
+	\item the characteristic polynomial 
+	\[
+		\det(\bm{A} - \lambda\bm{I}) = (\lambda - 9)(\lambda + 9)^{2}
+	\]
+	the minimum polynomial 
+	\[
+	m(\lambda) = (\lambda - 9)(\lambda + 9)  
+	\]
+	\item the characteristic polynomial 
+	\[
+	\det(\bm{A} - \lambda\bm{I}) = (\lambda^2- 2a_0\lambda + a_0^2 + a_1^2 + a_2^2 + a_3^2)^2
+	\]
+	the minimum polynomial 
+	\[
+	m(\lambda) = \lambda^2- 2a_0\lambda + a_0^2 + a_1^2 + a_2^2 + a_3^2
+	\]
+\end{enumerate}
+
+\mysection{17}{79}
+\text{Proof:} \\
+\indent $\det(\bm{A} - \lambda\bm{I}) = \det(\bm{A}^{T} - \lambda \bm{I})$,
+thus $A$ and $A^{T}$ have the same characteristic polynomial
+and same minimum polynomial.
+\mysection{18}{79}
+\textbf{Proof:}  \\
+\indent $V_{\lambda_0} = \left\lbrace \bm{x} | T_1\bm{x} = \lambda_0\bm{x},\bm{x} \in V^{n} \right\rbrace$,
+$\forall \bm{x} \in V_{\lambda_0}$, 
+\[
+T_1(T_2\bm{x}) = T_2(T_1\bm{x}) = T_2(\lambda_0 \bm{x}) = \lambda_0 (T_2\bm{x}),(T_2\bm{x})\in V^{n}
+\]
+$T_2\bm{x}$ still belongs to $V_{\lambda_0}$,thus $V_{\lambda_0}$ is the invariant subspace of $T_2$.
+
+\section{Additional Problem}
+\begin{enumerate}[(1)]
+	\item \text{Proof:} \\
+	\indent $N(f(T)) = \left\lbrace \bm{x}|f(T)\bm{x} = \bm{0},\bm{x} \in V^{n}\right \rbrace$, 
+			$N(g(T)) = \left\lbrace \bm{x}|g(T)\bm{x} = \bm{0},\bm{x} \in V^{n}\right \rbrace$.\\
+	two polynomials $f(\lambda)$ and $g(\lambda)$ are relatively prime,thus $f(\lambda) = 0$ and $g(\lambda) = 0$
+	have different roots.$\forall \bm{x} \in N(f(T))\bigcap N(g(T))$,
+	\begin{numcases}{}
+	f(T)\bm{x} = \bm{0} \label{form211}\\
+	g(T)\bm{x} = \bm{0}  \label{form212}
+	\end{numcases} 
+	equation(\ref{form211}) - equation(\ref{form212}),
+	\[
+	(f(T) - g(T)) \bm{x} = \bm{0} \label{form213}
+	\]	
+	the equation(\ref{form213}) only has a solution of $\bm{0}$.	
+		
+\end{enumerate}
 
 
 \end{document}
