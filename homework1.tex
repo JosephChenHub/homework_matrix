@@ -33,7 +33,7 @@
 \begin{document}
 \maketitle
 \mysection{3.(2)}{25}
-yes. 
+Yes. 
 Call the set of all real symmetric matrix ``${S}$''.
 \begin{itemize}
 	\item obviously zero matrix $\bm O \in {S}$;
@@ -55,7 +55,7 @@ if $a_1 = 1, a_2 = -2 , a_3 = 1$, it also has $a_1 \cdot 1 + a_2 \cdot \cos^{2}t
 So $1, \cos^{2} t, \cos 2t$ is linear dependent.
 
 \mysection{6}{25}
-let $(\eta_1,\eta_2,\eta_3)^{T}$ be the new coordinates of vector $\bm{x}$,
+Let $(\eta_1,\eta_2,\eta_3)^{T}$ be the new coordinates of vector $\bm{x}$,
 then 
 $\bm{x}= \eta_1\bm{x}_1 + \eta_2\bm{x}_2+ \eta_3\bm{x}_3 $,
 which equals to 
@@ -73,9 +73,9 @@ new coordinates of $\bm{x}$ : $(33,-82,154)^{T}$
 
 the original equation is equivalent to 
 \begin{numcases}{}
-(\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4) (1,2,0,0)^{T} = (\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)  (0,0,1,0)^{T} \label{form1} \\
-(\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4)  (0,1,2,0)^{T} = (\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)  (0,0,0,1)^{T}  \label{form2}\\
-(\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)  (1,2,0,0)^{T} = (\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4)  (0,0,1,0)^{T} \label{form3}\\
+(\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4)  (1,2,0,0)^{T} = (\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)  (0,0,1,0)^{T} \label{form1} \\
+(\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4)  (0,1,2,0)^{T} = (\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)  (0,0,0,1)^{T} \label{form2} \\
+(\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)  (1,2,0,0)^{T} = (\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4)  (0,0,1,0)^{T} \label{form3} \\
 (\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4)  (0,1,2,0)^{T} = (\bm{x}_1,\bm{x}_2,\bm{x}_3,\bm{x}_4)  (0,0,0,1)^{T} \label{form4}
 \end{numcases}
 combining equation(\ref{form1}),(\ref{form2}),(\ref{form3}) and (\ref{form4}),we have \\
@@ -104,20 +104,11 @@ thus the transformation matrix ($(\bm{y}_1,\bm{y}_2,\bm{y}_3,\bm{y}_4) =(\bm{x}_
 thus,$\bm{z} = \bm{C}(2,-1,1,1)^{T} = (11,23,4,-5)^{T} $.
 \end{enumerate}
 \mysection{10}{26}
-call the span space ``${S}$'',the linear combination of 
-$\bm{y}_1,\bm{y}_2,\bm{y}_3$ can be written as
-\begin{equation} 
-\begin{split}
-&k_1 (\bm{x}_1 - 2\bm{x}_2 + 3\bm{x}_3)+
- k_2(2\bm{x}_1 + 3\bm{x}_2 + 2\bm{x}_3)
- + k_3(4\bm{x}_1 + 13\bm{x}_2) \\
- =& (k_1 + 2k_2 + 4k_3)\bm{x}_1 + 
- (-2k_1+3k_2 + 13k_3)\bm{x}_2 +
- (3k_1 + 2k_2)\bm{x}_3 \\
-\end{split}
-\end{equation}
-it's a linear combination of $\bm{x}_1,\bm{x}_2,\bm{x}_3$,
-thus $\bm{x}_1,\bm{x}_2,\bm{x}_3$ is one basis of space ${S}$.
+$\mathcal{L}(\bm{y}_1,\bm{y}_2,\bm{y}_3)  = \left\lbrace k_1\bm{y}_1 + k_2 \bm{y}_2 + k_3 \bm{y}_3 \right\rbrace $,
+$\bm{y}_3 = 3\bm{y}_2 - 2\bm{y}_1 $,
+thus $\bm{y}_1,\bm{y}_2$ is one basis of $\mathcal{L}(\bm{y}_1,\bm{y}_2,\bm{y}_3)$.
+
+
 \mysection{11}{26} 
 ${S} = {V}_1 \bigcap  {V}_2 =
 \{(\xi_1,\xi_2,\xi_3,\xi_4)|\xi_1 = -\xi_3, \xi_2 = -\xi_4
@@ -171,9 +162,9 @@ thus it is a subspace of $\mathbf{R}^{2\text{X}2}$.
 \end{array} 
 \right)
 $,
-$\forall A \in {V}$, \\
+$\forall \bm{A} \in {V}$, \\
 \[
-A = \left( \begin{array}{cc}
+\bm{A} = \left( \begin{array}{cc}
 a_{11} & a_{12} \\
 a_{21} & -a_{11}
 \end{array} \right) 
@@ -187,9 +178,26 @@ and $\bm{e}_1,\bm{e}_2,\bm{e}_3$ is one basis of ${V}$.
 \end{enumerate}
 \section{Additional Problem}
 \textbf{Question}: \\
-if ${W}_1,{W}_2,{W}_3$ are subspaces of ${W}$, then 
+\indent if ${W}_1,{W}_2,{W}_3$ are subspaces of ${W}$, then 
 $({W}_1 \bigcap {W}_3) + ({W}_2 \bigcap {W}_3) \subset ({W}_1 +{W}_2) \bigcap {W}_3$.
-Can the left equal to the right under some circumstances?
+Can the left be equivalent to  the right? under which condition? \\
+\textbf{Solution:} \\
+\indent let $W = \mathbf{R}^{2}$,$W_1 = \mathcal{L}\left\lbrace (1,0) \right\rbrace$ ,
+$W_2 = \mathcal{L}\left\lbrace (0,1)\right\rbrace$,
+$W_3 = \mathcal{L}\left\lbrace (1,1)\right\rbrace  $.Then \\
+\[
+W_1 \bigcap W_3 = \left\lbrace \mathbf{0} \right\rbrace ;
+W_2 \bigcap W_3 = \left\lbrace \mathbf{0} \right\rbrace ;
+W_1 + W_2  = \mathbf{R}^{2};
+(W_1 + W_2)\bigcap W_3  = W_3
+\]
+Thus $({W}_1 +{W}_2) \bigcap {W}_3
+\not\subset 
+({W}_1 \bigcap {W}_3) + ({W}_2 \bigcap {W}_3)$. \\
+\begin{itemize}
+	\item if $W_3 = \left\lbrace \mathbf{0}\right\rbrace $ , then the left equals to the right;  
+	\item if $ (W_1 + W_2) \subset W_3 $, then $(W_1\bigcap W_3) + (W_2\bigcap W_3) = W_1 + W_2 = (W_1 + W_2)\bigcap W_3$.
+\end{itemize}
  
 
 
@@ -202,17 +210,17 @@ $\\
  = \alpha \bm{B}\bm{X}_1\bm{C} + \beta \bm{BX}_2\bm{C} = \alpha T(\bm{X}_1) + \beta T(\bm{X}_2) \]
 thus $T$ is linear transformation.
 \mysection{6}{78}
-let $\bm{g} = (\bm{x}_1,\bm{x}_2,..,\bm{x}_6)$,
+Let $\bm{g} = (\bm{x}_1,\bm{x}_2,..,\bm{x}_6)$,
 \begin{equation*}
 \left\lbrace 
-\begin{split}
+\begin{aligned}
 \frac{\partial \bm{x}_1}{\partial t} &= a\bm{x}_1-b\bm{x}_2 \\
 \frac{\partial \bm{x}_2}{\partial t} &= b\bm{x}_1+a\bm{x}_2\\
 \frac{\partial \bm{x}_3}{\partial t} &=\bm{x}_1 + a\bm{x}_3 - b\bm{x}_4 \\
 \frac{\partial \bm{x}_4}{\partial t}&=\bm{x}_2 + b\bm{x}_3 + a\bm{x}_4\\
 \frac{\partial \bm{x}_5}{\partial t}&=\bm{x}_3 + a\bm{x}_5 - b\bm{x}_6\\
 \frac{\partial \bm{x}_6}{\partial t}&= \bm{x}_4 +b\bm{x}_5 + a\bm{x}_6 
-\end{split}
+\end{aligned}
 \right .
 \end{equation*}
 thus 
@@ -398,7 +406,7 @@ are
 k(3\bm{x}_1 - 6\bm{x}_2 + 20\bm{x}_3), k \in \mathbf{R}, k \neq 0
 \]
 \mysection{13}{79}
-\qquad from $\det(\bm{A}-\lambda\bm{I}) = 0$  we can get $\lambda_1 = 2,\lambda_2 = \lambda_3 =1$.
+\qquad From $\det(\bm{A}-\lambda\bm{I}) = 0$  we can get $\lambda_1 = 2,\lambda_2 = \lambda_3 =1$.
 for $\lambda_1 = 2$, we get a basic solution $(0,0,1)^{T}$;
 for $\lambda_2 = \lambda_3 = 1$, we get a basic solution $(-1,-2,1)^{T}$.
 then we obtain a non-singular matrix:
@@ -420,7 +428,7 @@ further,
 \right) 
 \]
 \mysection{15}{79}
-let $\psi(\lambda) = (2\lambda^{4} - 12\lambda^{3} + 19 \lambda^{2} - 29\lambda + 37)$,
+Let $\psi(\lambda) = (2\lambda^{4} - 12\lambda^{3} + 19 \lambda^{2} - 29\lambda + 37)$,
 the characteristic polynomial of A \\
 \[
 \varphi(\lambda) = \det(\bm{A} - \lambda\bm{I}) = (\lambda - 1)(\lambda - 5) + 2 
@@ -465,7 +473,7 @@ the original problem is equivalent to  solving ${\psi(\bm{A})}^{-1} $ ,
 \end{enumerate}
 
 \mysection{17}{79}
-\text{Proof:} \\
+\textbf{Proof:} \\
 \indent $\det(\bm{A} - \lambda\bm{I}) = \det(\bm{A}^{T} - \lambda \bm{I})$,
 thus $A$ and $A^{T}$ have the same characteristic polynomial
 and same minimum polynomial.
@@ -480,25 +488,45 @@ $T_2\bm{x}$ still belongs to $V_{\lambda_0}$,thus $V_{\lambda_0}$ is the invaria
 
 \section{Additional Problem}
 \begin{enumerate}[(1)]
-	\item \text{Proof:} \\
-	\indent $N(f(T)) = \left\lbrace \bm{x}|f(T)\bm{x} = \bm{0},\bm{x} \in V^{n}\right \rbrace$, 
-			$N(g(T)) = \left\lbrace \bm{x}|g(T)\bm{x} = \bm{0},\bm{x} \in V^{n}\right \rbrace$.\\
+	\item \textbf{Proof:} 
+		 \[N(f(T)) = \left\lbrace \bm{x}|f(T)\bm{x} = \bm{0},\bm{x} \in V^{n}\right \rbrace, 
+			N(g(T)) = \left\lbrace \bm{x}|g(T)\bm{x} = \bm{0},\bm{x} \in V^{n}\right \rbrace
+	   	\]
 	two polynomials $f(\lambda)$ and $g(\lambda)$ are relatively prime,thus $f(\lambda) = 0$ and $g(\lambda) = 0$
 	have different roots.$\forall \bm{x} \in N(f(T))\bigcap N(g(T))$,
 	\begin{equation}
 	\label{form211}
 	\left\lbrace 
-	\begin{split} 
+	\begin{aligned} 
 	f(T)\bm{x} = \bm{0}\\
 	g(T)\bm{x} = \bm{0} 
-	\end{split} \right .  
+	\end{aligned} \right .  
 	\end{equation} 
-
-
 	the equation(\ref{form211}) has a unique solution of $\bm{x} = \bm{0}$.	
 	thus $N(f(T)) \bigcap N(g(T)) = \left\lbrace \bm{0}\right\rbrace$	
 			
-   \item 
+   \item \[\begin{aligned}
+   N(f(T)) \bigoplus N(g(T)) &= \left\lbrace \bm{z}|\bm{z} = \bm{x}_1 + \bm{x}_2, 
+   \bm{x}_1\in N(f(T)),\bm{x}_2\in N(g(T))    \right\rbrace ,\\
+   N(f(T)g(T)) &= \left\lbrace \bm{x}|f(T)g(T)\bm{x} = \bm{0},\bm{x}\in V^{n}\right\rbrace 
+   \end{aligned} 
+   \]
+   $\forall \bm{z} \in  N(f(T)) \bigoplus N(g(T))$,
+   \[
+   \begin{split} 
+	  f(T)g(T)\bm{z} &=  f(T)g(T)(\bm{x}_1 + \bm{x}_2)  \\
+	&= f(T)(g(T)\bm{x}_1 + g(T)\bm{x}_2 ) \\
+	&= f(T)(g(T)\bm{x}_1 + \bm{0}) \\
+	&= f(T)g(T)\bm{x}_1
+	\end{split} 
+   \]
+   $f(\lambda)g(\lambda) = g(\lambda)f(\lambda)$, thus $f(T)g(T) = g(T)f(T)$,then
+   \[
+   f(T)g(T)\bm{z} = f(T)g(T)\bm{x}_1 = g(T)f(T)\bm{x}_1 = \bm{0}
+   \]
+   $\bm{z} \in V^{n}$,so $N(f(T)) \bigoplus N(g(T)) = N(f(T)g(T)) $
+   
+   
 \end{enumerate}
 
 
