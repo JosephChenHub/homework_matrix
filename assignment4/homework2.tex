@@ -251,20 +251,207 @@ thus
 	T\bm{x} = \sqrt{38}\bm{e}_1
 \]
 \mysection{4}{219}
+\[ \begin{split} 
+		(\bm{Hx})^T &= \bm{x}^T - a(\bm{x},\bm{w})\bm{w}^T \\
+		\bm{Hx}(\bm{Hx})^T &= (\bm{x} - a(\bm{x},\bm{w})\bm{w})(\bm{x}^T - a(\bm{x},\bm{w})\bm{w}^T) \\
+		&= \bm{xx}^T - 2a(\bm{x},\bm{w})\bm{wx}^T + a^2(\bm{x},\bm{w})^2 \bm{ww}^T \\
+		&= \bm{xx}^T - 2a(\bm{wx}^T)^2 + a^2(\bm{wx}^T)^2
+	\end{split}
+\]
+let $\bm{H}\bm{H}^T = \bm{H}^T\bm{H} = I$,
+\[
+	- 2a(\bm{wx}^T)^2 + a^2(\bm{wx}^T)^2 = 0	
+\]
+hence $a = 0 , 2$.
 
 \mysection{7}{219}
+\[
+	b_1 = (2,0,2)^T, T_{13} = \left( \begin{array}{ccc}
+	1/\sqrt{2} & 0 & 1/\sqrt{2} \\
+	0 & 1  & 0\\
+	-1/\sqrt{2} & 0 & 1/\sqrt{2}
+	\end{array} \right) 
+\]
+then
+\[
+	T_{13}A^{(0)} = \left( \begin{array}{ccc}
+	4/\sqrt{2} & 3/\sqrt{2} & 3/\sqrt{2} \\
+	0 & 2 & 2 \\
+	0 & -1/\sqrt{2} & 1/\sqrt{2} 
+	\end{array}\right)
+\]
+\[
+	b_2 = (2,-1/\sqrt{2})^T, T_{12} = \left(\begin{array}{cc}
+	 2\sqrt{2}/3 & -1/3 \\
+	 1/3 & 2\sqrt{2}/3
+	\end{array} \right) 
+\]
+\[
+	T_{12}A^{(1)} = \left( \begin{array}{cc}
+	 3\sqrt{2}/2 & 7\sqrt{2}/6 \\
+	 0 & 4/3
+	\end{array} \right) 
+\]
+\[
+	T= \left( \begin{array}{cc}
+	1 & \\
+	 & T_{12}
+	\end{array} \right)T_{13}
+	= \left(\begin{array}{ccc} 
+	 1/\sqrt{2} & 0 & 1/\sqrt{2} \\
+	 1/(3\sqrt{2}) & 2\sqrt{2}/3 & -1/(3\sqrt{2}) \\
+	 -2/3 & 1/3 & 2/3	
+	\end{array} \right) 
+\]
+\[
+	Q = T^T,
+	R = \left(\begin{array}{ccc} 
+		4/\sqrt{2} & 3/\sqrt{2} & 3/\sqrt{2} \\
+			& 3\sqrt{2}/2 & 7\sqrt{2}/6 \\
+			& 0 & 4/3	
+	\end{array} \right) 
+\]
 
 \mysection{8}{219}
-
+\[
+	\bm{b}_1 = (0,1,0)^T, \bm{b}_1 - |\bm{b}_1|\bm{e}_1 = (-1,1,0)^T,
+	\bm{u} = \frac{1}{\sqrt{2}}(-1,1,0)^T
+\]
+then
+\[
+	H_1 = \bm{I} - 2\bm{uu}^T = \left(\begin{array}{ccc}
+		 0& 1 &0 \\
+		 1& 0 &0 \\
+		 0& 0 & 1
+	\end{array} \right),
+	H_1 A^{(0)} = \left( \begin{array}{ccc}
+		1 & 1 & 1 \\
+		0 & 4 & 1\\
+		0 & 3 & 2
+	\end{array} \right) 
+\]
+\[
+	\bm{b}_2 = (4,3)^T,  \bm{b}_2 - |\bm{b}_2|\bm{e}_1 = (-1,3)^T,
+	\bm{u} = \frac{1}{\sqrt{10}}(-1,3  )^T
+\]
+\[
+	\bm{H}_2 = \bm{I} - 2\bm{uu}^T= \left(\begin{array}{cc}
+	4/5& 3/5 \\
+	3/5& -4/5 \\
+	\end{array} \right), 
+	H_2A^{(1)} = \left( \begin{array}{cc}
+		5 & 2 \\
+		0 & -1
+	\end{array} \right) 
+\]
+Hence
+\[
+	H = \left( \begin{array}{cc}
+		1 & \\
+		 & H_2 
+	\end{array}\right) 	H_1 = \left(\begin{array}{ccc}
+		0 & 1 & 0 \\
+		4/5 & 0 & 3/5 \\
+		3/5 & 0 &-4/5 \\
+	\end{array}\right) ,
+	Q = H^T, 
+	R = \left( \begin{array}{ccc}
+		1 & 1 & 1 \\
+		& 5 & 2\\
+		& & -1
+	\end{array} \right) 
+\]
 \mysection{1}{225}
-
+\begin{enumerate}[(1)]
+	\item  \[
+		A \rightarrow B = \left( \begin{array}{cccc}
+		1 & 0 & 2 & 1\\
+		0 & 1 & 1/2 & -1/2 \\
+		0 & 0 & 0 & 0	
+	\end{array} 		\right) 
+	\]
+  take $a_1,a_2$, 	
+  \[
+	  F = (a_1, a_2) = \left( \begin{array}{cc}
+	  1 & 2\\
+	  0 & 2\\
+	  1 & 0 \\
+	  \end{array}\right) ,
+	  G = \left( \begin{array}{cccc}
+		  1 & 0 & 2 & 1\\
+		  0 & 1 & 1/2 & -1/2
+	  \end{array} \right) 
+  \]
+ \item 
+ \[
+ A \rightarrow B = \left( \begin{array}{cccc}
+ 1 & 0 & 0 & 0\\
+ 0 & 1 & -1 & -1 \\
+ 0 & 0 & 0 & 0 \\
+ 0 & 0 & 0 & 0 
+ \end{array} 		\right) 
+ \]
+ take $a_1,a_2$, 	
+ \[
+ F = (a_1, a_2) = \left( \begin{array}{cc}
+ 1 & -1\\
+ -1 & 1\\
+ -1 & -1 \\
+ 1 & 1
+ \end{array}\right) ,
+ G = \left( \begin{array}{cccc}
+ 1 & 0 & 0 & 0\\
+ 0 & 1 & -1 & -1 \\
+ \end{array} \right) 
+ \]
+	
+\end{enumerate}
 \mysection{2}{225}
-
+\textbf{Proof:} \\
+since $\text{rank}(\bm{B}) = r$ ,we have
+\[
+	\bm{B} = \bm{QR}
+\]
+here $\bm{Q} \in \mathbb{R}_r^{m\times r}, \bm{R} \in \mathbb{R}_r^{r\times r}$ and
+$\bm{Q}^T\bm{Q} = \bm{I}$, $\bm{R}$ is a non-singular triangular matrix.Hence
+\[
+	\bm{B}^T\bm{B} = (\bm{QR})^T\bm{QR} = \bm{R}^T\bm{Q}^T\bm{QR} = \bm{R}^T\bm{R}
+\]
+$\bm{B}^T\bm{B}$ is non-singular.
 \mysection{3}{225}
-
+\textbf{Proof:}
+\begin{itemize}
+	\item if $\text{rank}(\bm{A}) = m $, then we have $\bm{A} = \bm{QR}, \bm{Q} \in \mathbf{C}_m^{n\times m} , \bm{Q}^H\bm{Q}=\bm{I},
+	\bm{R} \in \mathbf{C}_m^{m\times m}$,
+	 let $\bm{B} = \bm{R}^{-1}\bm{Q}^H \in \mathbf{C}^{m\times n}$, then $\bm{BA} = \bm{R}^{-1}\bm{Q}^H\bm{QR} = \bm{I}$;
+	\item if $\bm{BA} = \bm{I}$, let $
+	 \text{rank}(\bm{B}) = r \leq n$,
+	then $ \bm{B} = \bm{Q}\bm{R}, 
+	 \bm{Q} \in \mathbf{C}_{r}^{m\times {r}}, \bm{R}\in \mathbf{C}_{r}^{{r}\times n} 
+	 $,
+	 \[ \begin{split} 
+		 \bm{BA} &= \bm{Q}\bm{R}\bm{A}= \bm{I} \\
+		 \bm{R}\bm{A} &= \bm{Q}^H
+		\end{split} 
+	 \]
+	  $\text{rank}(\bm{RA}) = r $ and $\text{rank}(\bm{R}) = r$, 
+	 thus $\text{rank}(\bm{A}) = m$.
+\end{itemize}
+	
 \mysection{4}{225}
+\textbf{Proof:}\\
+$\bm{F} = \bm{Q}_1\bm{R}_1, \bm{Q}_1\in\mathbf{C}_r^{m\times r}, \bm{R}_1\in\mathbf{C}_r^{r\times r}$,
+\[
+	\bm{FG} = \bm{Q}_1\bm{R}_1\bm{G} = \bm{Q}_1 \bm{R}
+\]
+$\bm{R} = \bm{R}_1\bm{G}\in \mathbf{C}_r^{r\times n}$,thus
+\[
+	\text{rank}(\bm{FG}) = r
+\]
 
 \mysection{1}{233}
+
+
 
 \mysection{3}{233}
 
